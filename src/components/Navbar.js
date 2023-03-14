@@ -1,58 +1,35 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FaBars } from 'react-icons/fa';
-import { links, social } from './data';
-import { Button } from 'react-bootstrap';
+import React from "react";
 
-const Navbar = () => {
-  const [showLinks, setShowLinks] = useState(false);
-  const linksContainerRef = useRef(null);
-  const linksRef = useRef(null);
-  const toggleLinks = () => {
-    setShowLinks(!showLinks);
-  };
-  useEffect(() => {
-    const linksHeight = linksRef.current.getBoundingClientRect().height;
-    if (showLinks) {
-      linksContainerRef.current.style.height = `${linksHeight}px`;
-    } else {
-      linksContainerRef.current.style.height = '0px';
-    }
-  }, [showLinks]);
-  return (
-    <nav>
-      <div className='nav-center'>
-        <div className='nav-header'>
-          <img src={logo} className='logo' alt='logo' />
-          <button className='nav-toggle' onClick={toggleLinks}>
-            <FaBars />
-          </button>
-        </div>
-        <div className='links-container' ref={linksContainerRef}>
-          <ul className='links' ref={linksRef}>
-            {links.map((link) => {
-              const { id, url, text } = link;
-              return (
-                <li key={id}>
-                  <a href={url}>{text}</a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-        {/* //getting links from data.js */}
-        <ul className='social-icons'>
-          {social.map((socialIcon) => {
-            const { id, url, icon } = socialIcon;
-            return (
-              <li key={id}>
-                <a href={url}>{icon}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </nav>
-  );
+// declare object called styles for card and heading styles
+const styles = {
+  card: {
+    margin: 20,
+    background: "#718232",
+    display: "flex",
+    justifyContent: 'center',
+    justifyContent: 'space-around',
+  },
+  heading: {
+    borderRadius: '45% 155% 5% 65%',
+    background: "#acd556",
+    minHeight: 50,
+    lineHeight: 3.5,
+    fontSize: "1.2rem",
+    color: "white",
+    padding: "0 20px",
+  },
 };
+
+function Navbar() {
+  return (
+    // assign a style from object
+
+    <div style={styles.card}>
+      <div style={styles.heading}>About</div>
+      <div style={styles.heading}>Contact</div>
+      <div style={styles.heading}>Resume</div>
+    </div>
+  );
+}
 
 export default Navbar;
