@@ -1,14 +1,9 @@
 import React from "react";
-import { IconName } from "react-icons/bs";
+import { FaGithub, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
 
 
 const styles = {
-    card: {
-      margin: 20,
-      background: '#373238',
-      color: 'white',
-      borderRadius: '65% 155% 25% 50%',
-    },
+
     footer: {
       background: '#c9ceac',
       minHeight: 50,
@@ -16,11 +11,10 @@ const styles = {
       fontSize: '1.2rem',
       color: '#718232',
       padding: '20px',
-      display: 'flex',
-      alignSelf: 'center',
-    },
-    content: {
-      padding: 20,
+      listStyle: "none",
+      textDecoration: "none",
+      display: "flex",
+      justifyContent: "spaceAround",
     },
   };
 
@@ -33,32 +27,37 @@ export default function Footer() {
           target="blank"
           rel="noopener noreferrer"
         >
-          <li  className="logo">Github</li>
+          <li  className="logo"><FaGithub />Github</li>
         </a>
-        <a
-          href="https://www.linkedin.com/in/colin-nebula-07176022/"
+        <a style={styles.footer}
+          href="https://www.linkedin.com/in/saraf-nawar-060836170/"
           target="blank"
           rel="noopener noreferrer"
         >
-          <li className="logo">LinkedIn</li>
+          <li className="logo"><FaLinkedin />LinkedIn</li>
         </a>
-        <a
-          href="https://www.youtube.com/"
+        <a style={styles.footer}
+          href="https://stackoverflow.com/users/15198797/swedishfish?tab=badges"
           target="blank"
           rel="noopener noreferrer"
         >
-          <li className="logo">logo3</li>
+          <li className="logo"><FaStackOverflow />StackOverflow</li>
         </a>
 
         <div>
-          <a href="#">
-            <i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home
+          <a style={styles.footer} 
+          href="https://www.linkedin.com/in/saraf-nawar-060836170/"
+          rel="noopener noreferrer">
+                Back to top
           </a>
           <br />
           &copy; 2022{" "}
-          <a href="mailto:colinnebula@gmail.com">sarafnrealtor@gmail.com</a>
+          
         </div>
+        
       </footer>
     </div>
+    
   );
+  
 }

@@ -4,12 +4,11 @@ import React from 'react'
 const styles = {
     card: {
       margin: 20,
-      background: '#373238',
       color: 'white',
-      borderRadius: '65% 155% 25% 50%',
-    },
+      },
     heading: {
-      background: '#c9ceac',
+      
+      textShadow: "10px 10px 4px #ffffff",
       minHeight: 50,
       lineHeight: 3.5,
       fontSize: '1.2rem',
@@ -17,20 +16,22 @@ const styles = {
       padding: '20px',
       display: 'flex',
       alignSelf: 'center',
+      background: "#A3FFB9",
+      background: "-moz-linear-gradient(left, #A3FFB9 0%, #D4D4D4 50%, #000000 100%)",
+      background: "-webkit-linear-gradient(left, #A3FFB9 0%, #D4D4D4 50%, #000000 100%)",
+      background: "linear-gradient(to right, #A3FFB9 0%, #D4D4D4 50%, #000000 100%)",
     },
     content: {
       padding: 20,
+      
     },
   };
 
 function Header() {
   return (
     <div style={styles.heading}>
-      <h1 style={styles.card}> Hi, I'm Saraf!✋   
+      <h1> Hi, I'm Saraf!✋   
       </h1>
-      <h2>
-        I'm a Full Stack Developer.
-      </h2>
     </div>
   )
 }

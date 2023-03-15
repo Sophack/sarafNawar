@@ -6,8 +6,8 @@ const styles = {
     margin: 20,
     background: "#718232",
     display: "flex",
-    justifyContent: 'center',
     justifyContent: 'space-around',
+    borderRadius: "5% 15%",
   },
   heading: {
     borderRadius: '45% 155% 5% 65%',
@@ -17,6 +17,8 @@ const styles = {
     fontSize: "1.2rem",
     color: "white",
     padding: "0 20px",
+    webkitBoxShadow: "5px 5px 15px 5px #000000", 
+    boxShadow: "5px 5px 15px 5px #000000",
   },
 };
 
@@ -26,6 +28,7 @@ function Navbar() {
 
     <div style={styles.card}>
       <div style={styles.heading}>About</div>
+      <div style={styles.heading}>Portfolio</div>
       <div style={styles.heading}>Contact</div>
       <div style={styles.heading}>Resume</div>
     </div>
