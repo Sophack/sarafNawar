@@ -3,13 +3,10 @@ import React, { useState } from 'react';
 
 function Greeting() {
   // Declare a state variable `greeting` using `useState`
-  // Give the method to update it a name, `setGreeting`
-  // useState accepts one argument for the default or initial value of the state variable. In our case, we set it to "Welcome the following students to class!".
   const [greeting, setGreeting] = useState(
     'Im a Full Stack Developer'
   );
   // Convert `group` to a state variable using the `useState` hook.
-  // Set to an initial value to an array including three students in your class. (ex. ["John", "Grace", "Jared"])
   const [group, setGroup] = useState(['CSS', 'HTML', 'Javascript', 'React', 'Database handling with SQL & Mongo', "Bootstrap", 'Material UI']);
 
   const styles = {
