@@ -43,17 +43,6 @@ export default function Footer() {
         >
           <li className="logo"><FaStackOverflow />StackOverflow</li>
         </a>
-
-        <div>
-          <a style={styles.footer} 
-          href="https://www.linkedin.com/in/saraf-nawar-060836170/"
-          rel="noopener noreferrer">
-                Back to top
-          </a>
-          <br />
-          &copy; 2022{" "}
-          
-        </div>
         
       </footer>
     </div>
