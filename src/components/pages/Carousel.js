@@ -13,7 +13,7 @@ import { Carousel } from "react-bootstrap";
 import Recipe from "../../assets/recipe.jpg";
 import Showboat from "../../assets/showBoat.png";
 import FaThyme from "../../assets/familyThyme.png";
-import Blank from "../../assets/blank.jpg";
+
 
 
 const styles ={
