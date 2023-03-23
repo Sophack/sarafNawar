@@ -10,7 +10,7 @@ const styles = {
       
       textShadow: "10px 10px 4px #ffffff",
       minHeight: 50,
-      lineHeight: 3.5,
+      lineHeight: 1.5,
       fontSize: '1.2rem',
       color: '#718232',
       padding: '20px',

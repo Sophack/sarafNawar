@@ -7,14 +7,15 @@ import InputForm from "../components/pages/Form";
 import Navbar from './Navbar';
 import Footer from './Footer';
 import About from './pages/About';
-import Greeting from './pages/Skills';
+import Resume from './pages/Resume';
+import Header from './Header';
 
 import BootstrapCarousel from './pages/Carousel';
 
 const styles={ 
     background: '#c9ceac',
       minHeight: 50,
-      lineHeight: 3.5,
+      lineHeight: 1.5,
       fontSize: '1.2rem',
       color: '#718232',
 }
@@ -26,10 +27,11 @@ export default function Contain() {
         <div> 
     <Container style={styles}>
       <Row>
+        <Header/>
       <Navbar/>
         <Col><BootstrapCarousel/></Col>
         <About/>
-      <Greeting/>
+      <Resume/>
       <InputForm/>
       </Row>
         <Footer/>

@@ -1,0 +1,57 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #44815f;
+    box-shadow: 0 5px 15px #07110c;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 12px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(57, 218, 236);
+    transition: 0.3s ease-in-out;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: #1d329ec5;
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #8bff18c5;
+    position: absolute;
+    bottom: -1px;
+    left: 20px;
+}
+
+#mobile i {
+     color: #fff
+}
+
+
+/* resume styling */
+
+.card-body{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
