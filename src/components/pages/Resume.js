@@ -12,7 +12,7 @@ function Resume() {
   
 
   return (
-    <div className="card text-center">
+    <div className="card text-center" id="resume">
       <div className="card-body">
         {/* Render the `resume` state variable */}
        

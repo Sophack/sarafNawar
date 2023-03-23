@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -9,7 +8,6 @@ import Footer from './Footer';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import Header from './Header';
-
 import BootstrapCarousel from './pages/Carousel';
 
 const styles={ 
@@ -24,16 +22,20 @@ const styles={
 export default function Contain() {
 
     return (
+      
         <div> 
     <Container style={styles}>
       <Row>
         <Header/>
       <Navbar/>
-        <Col><BootstrapCarousel/></Col>
+        <Col>
         <About/>
-      <Resume/>
-      <InputForm/>
-      </Row>
+        <BootstrapCarousel/>
+        <Resume/>
+        <InputForm/>
+        
+        </Col>
+        </Row>
         <Footer/>
     </Container>
     

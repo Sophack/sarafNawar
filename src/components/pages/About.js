@@ -33,7 +33,7 @@ const styles = {
 
 function About() {
   return (
-    <div style={styles.card}>
+    <div style={styles.card} id="about">
       <div style={styles.heading}>About Me</div>
       <div style={styles.content}>
         <ul>
