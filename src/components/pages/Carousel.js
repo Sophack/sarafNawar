@@ -19,13 +19,22 @@ import FaThyme from "../../assets/familyThyme.png";
 const styles ={
     carousel: {
       maxHeight: "400px",
-      width: "container"
+      width: "400px"
     },
     fontstyle:{
       background:"white",
       color:"black",
       border: "none",
       borderRadius:"15px",
+      padding: "20px",
+      display: "tableCaption",
+      captionSide: "top",
+    },
+
+    caption: {
+      height: "400px",
+      display: "tableCaption",
+      captionSide: "top",
     }
     
 }
@@ -36,10 +45,9 @@ export default function BootstrapCarousel() {
     <Carousel fade>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-100 carousel-fade" data-bs-interval="10000"
+          className="caption" data-bs-interval="10000"
           src={Recipe}
           alt="First slide"
-          
         />
         <Carousel.Caption style={styles.fontstyle}>
           <h3>Recipes App
@@ -49,14 +57,15 @@ export default function BootstrapCarousel() {
            </p>
         </Carousel.Caption>
       </Carousel.Item>
+
+
       <Carousel.Item>
         <img
           className="d-block w-100"
           src={Showboat}
           alt="Second slide"
         />
-
-        <Carousel.Caption>
+        <Carousel.Caption style={styles.fontstyle}>
           <h3>ShowBoat
           <br></br>
           Search & confirm which programs are on which streaming service, find out info about the title or just plan a movie night!</h3>
@@ -69,7 +78,7 @@ export default function BootstrapCarousel() {
           src={FaThyme}
           alt="First slide"
         />
-        <Carousel.Caption>
+        <Carousel.Caption style={styles.fontstyle}>
           <h3>Family Thyme
           <br></br>
           Save your private or precious family secrets on a an encrypted app only accessible by your family members 

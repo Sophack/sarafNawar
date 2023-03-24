@@ -1,87 +1,133 @@
 /* container styling  */
-*{
-    box-sizing: border-box;
-    margin: auto;
-    padding: 0px;
+* {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0px;
 }
+
+/* greeting styling */
+button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: #1b5811;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 40%;
+  transition: 250ms ease-in-out; 
+  transform: 150ms ease;
+  }
+
+ button:hover{
+  text-shadow: 10px 10px 4px #041a0d;
+  font-size: larger;
+}
+
+.form {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 40%;
+  transition: 250ms ease-in-out; 
+  transform: 150ms ease;
+  }
 
 /* nav styling  */
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 8vh;
-    background: #44815f;
-    box-shadow: 0 5px 15px #07110c;
-    border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 8vh;
+  background: #44815f;
+  box-shadow: 0 5px 15px #07110c;
+  border-radius: 5px;
 }
 
 #navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#navbar ul {
-    list-style: none;
-    padding: 12px;
-    position: relative;
+
+#navbar li {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  list-style: none;
+  transition: 0.3s ease-in-out;
+  padding: 4%;
 }
 
-#about, #port, #resume, #contact{
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: rgb(57, 218, 236);
-    transition: 0.3s ease-in-out;
+#navbar a {
+  display: inline-block;
+  border: none;
+  padding: 1rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: transparent;
+  color: #8bdd7e;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition: 250ms ease-in-out; 
+  transform: 150ms ease;
+  }
+
+#navbar a:hover{
+  text-shadow: 10px 10px 4px #041a0d;
+  font-size: larger;
 }
 
-#navbar a:hover,
-#navbar a.active{
-    color: #1d329ec5;
+#navbar a:focus {
+  outline-offset: -4px;
+  
 }
 
-#navbar a:hover::after,
-#navbar li a.active::after {
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: #aef568c5;
-    position: absolute;
-    bottom: -1px;
-    left: 20px;
+#navbar a:active {
+  transform: scale(0.99);
 }
 
 .burger {
-    display: none;
+  display: none;
+  cursor: pointer;
 }
 
 .burger div {
-    width: 25px;
-    height: 1vh;
-    border-radius: 40%;
-    background-color:rgb(57, 218, 236);
-    margin: 5px;
+  width: 25px;
+  height: 1vh;
+  border-radius: 40%;
+  background-color: rgb(57, 218, 236);
+  margin: 5px;
 }
 
-@media screen and (max-width: 768px){
-    #navbar li{
-        display:none;
-    }
-    .burger {
-        display:block;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+@media screen and (max-width: 768px) {
+  #navbar li {
+    display: none;
+    transform: translateX(100%);
+  }
+  .burger {
+    display: block;
+    flex-direction: column;
+    margin-right: 150px;
+  }
+  .burger:hover{
+    border-radius: 30%;
+    background-color: rgb(117, 167, 172);
+  }
+  #navbar-active {
+    transform: translateX(0%);
+  }
 }
-
 
 /* resume styling */
 
-.card-body{
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 600;
-    transition: 0.3s ease-in-out;
+.card-body {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
 }
+
+

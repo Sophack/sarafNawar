@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 
 function Resume() {
-  // Declare a state variable `greeting` using `useState`
+  // Declare a state variable 
   const [resume, setResume] = useState(
-    'Im a Full Stack Developer'
+    'As a passionate developer, I am always looking for opportunities to finetune my skills. I am highly motivated, completing the web-development certificate as well as the full-stack course while working as a realtor. Having worked with a company from the ground-up (Amperslash) and working in real estate has given me a unique perspective. I know what it takes to build something from scratch & work hard until it is finished. This also made me perfect for high-performance fields such as real estate and full-stack development. '
   );
   // Convert `group` to a state variable using the `useState` hook.
   const [group, setGroup] = useState(['CSS', 'HTML', 'Javascript', 'React', 'Database handling with SQL & Mongo', "Bootstrap", 'Material UI']);
