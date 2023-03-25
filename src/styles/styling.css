@@ -34,12 +34,8 @@ button {
 
 /* nav styling  */
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   min-height: 8vh;
   background: #44815f;
-  box-shadow: 0 5px 15px #07110c;
   border-radius: 5px;
 }
 
@@ -52,11 +48,9 @@ nav {
 
 #navbar li {
   text-decoration: none;
-  font-size: 1.3rem;
   font-weight: 600;
   list-style: none;
   transition: 0.3s ease-in-out;
-  padding: 4%;
 }
 
 #navbar a {
@@ -131,7 +125,7 @@ nav {
 }
 
  .burger-bar.clicked:nth-child(1){
-    transform: rotate(45deg) translate(0.75em, 1.25em);
+    transform: rotate(45deg) translate(-0.2em, 1.25em);
     transition: ease-out 0.5s;
 }
 
@@ -141,7 +135,7 @@ nav {
 }
 
 .burger-bar.clicked:nth-child(3){
-    transform: rotate(135deg) translate(-0.5em, 1em);
+    transform: rotate(140deg) translate(0.5em, 1em);
     transition: ease-out 0.5s;
 }
 
@@ -149,6 +143,7 @@ nav {
 .burger-bar.unclicked {
     transform: rotate(0) translate(0);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+    border: 1px solid black;
 }
 
 @media screen and (max-width: 768px) {
@@ -156,19 +151,11 @@ nav {
     display: none;
     transform: translateX(100%);
   }
-  .burger {
+  .hidden {
     display: block;
     flex-direction: column;
     margin-right: 150px;
     padding-top: 10px;
-  }
-  .burger:hover{
-    border-radius: 30%;
-    background-color: rgb(117, 167, 172);
-  }
-
-  .burgerX {
-    display: block;
   }
 
   #navbar-active {

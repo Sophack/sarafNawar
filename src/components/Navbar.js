@@ -40,7 +40,7 @@ function Navbar() {
             
             </div>
             <div>
-                <div className="burger-menu" onClick={updateMenu}>
+                <div className="burger-menu hidden" onClick={updateMenu}>
                     <div className={burger_class} ></div>
                     <div className={burger_class} ></div>
                     <div className={burger_class} ></div>

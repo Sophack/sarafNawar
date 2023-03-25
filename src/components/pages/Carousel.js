@@ -27,14 +27,11 @@ const styles ={
       border: "none",
       borderRadius:"15px",
       padding: "20px",
-      display: "tableCaption",
-      captionSide: "top",
     },
 
     caption: {
       height: "400px",
       display: "tableCaption",
-      captionSide: "top",
     }
     
 }
@@ -45,7 +42,7 @@ export default function BootstrapCarousel() {
     <Carousel fade>
       <Carousel.Item>
         <img
-          className="caption" data-bs-interval="10000"
+          style={styles.caption} data-bs-interval="10000"
           src={Recipe}
           alt="First slide"
         />
@@ -61,7 +58,7 @@ export default function BootstrapCarousel() {
 
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          style={styles.caption}
           src={Showboat}
           alt="Second slide"
         />
@@ -74,7 +71,7 @@ export default function BootstrapCarousel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100 h-100 carousel-fade" data-bs-interval="10000"
+          style={styles.caption} data-bs-interval="10000"
           src={FaThyme}
           alt="First slide"
         />
