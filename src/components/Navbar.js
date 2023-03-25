@@ -1,15 +1,21 @@
 import "../styles/styling.css";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { HashLink as Link } from "react-router-hash-link";
+import { useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
+  const navRef = useRef();
+
+  const showNavbar =() => {
+    navRef.current.classList.toggle("res")
+  }
 
   return (
     <BrowserRouter>
       <nav>
         <div>
-          <ul id="navbar">
+          <ul id="navbar" ref={navRef}>
             <li>
               <a className="active" href="index.html">
                 Home
@@ -20,13 +26,18 @@ function Navbar() {
             <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
             </ul>
+            <button
+					className="nav-btn nav-close-btn"
+					onClick={showNavbar}>
+					<FaTimes />
+				</button>
             </div>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-          
-        </div>
+
+        <button
+				className="burger"
+				onClick={showNavbar}>
+				<FaBars />
+			</button>
       </nav>
     </BrowserRouter>
   );

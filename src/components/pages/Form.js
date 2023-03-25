@@ -4,16 +4,19 @@ import { validateEmail } from "../../utils/helpers";
 import '../../styles/contact.css';
 
 function InputForm() {
+  //create state variables with empty string values (these are the fields in the form)
   const [email, setEmail] = useState("");
   const [Name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleInputChange = (e) => {
+    //value and name of input that triggered the change
     const { target } = e;
     const inputType = target.name;
     const inputValue = target.value;
 
+    //based on the input type we set the state 
     if (inputType === "email") {
       setEmail(inputValue);
     } else if (inputType === "Name") {
@@ -23,7 +26,9 @@ function InputForm() {
     }
   };
 
+  //function for submitting form
   const handleFormSubmit = (e) => {
+//prevent default behaviour 
     e.preventDefault();
 
     if (!validateEmail(email)) {
@@ -42,7 +47,7 @@ function InputForm() {
     }
 
     if (email || Name || message) {
-      setSuccessMessage("Form Submitted Successfully");
+      setSuccessMessage("Form Submitted");
       return;
     }
 
@@ -92,6 +97,11 @@ function InputForm() {
           </button>
         </div>
       </form>
+      {successMessage && (
+        <div>
+          <p className="success-text">{successMessage}</p>
+        </div>
+      )}
       </div>
     )
   }

@@ -111,11 +111,15 @@ nav {
     display: block;
     flex-direction: column;
     margin-right: 150px;
+    padding-top: 10px;
   }
   .burger:hover{
     border-radius: 30%;
     background-color: rgb(117, 167, 172);
   }
+
+ 
+
   #navbar-active {
     transform: translateX(0%);
   }
