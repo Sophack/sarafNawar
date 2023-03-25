@@ -89,9 +89,30 @@ nav {
   transform: scale(0.99);
 }
 
-.burger {
-  display: none;
-  cursor: pointer;
+.burger-menu {
+    height: 100%;
+    width: 4em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.burger-bar {
+    width: 4em;
+    height: 0.5em;
+    background-color: rgb(0, 183, 255);
+    border-radius: 0.5em;
+}
+
+.menu {
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(154, 181,240);
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
 .burger div {
@@ -100,6 +121,34 @@ nav {
   border-radius: 40%;
   background-color: rgb(57, 218, 236);
   margin: 5px;
+}
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
+
+ .burger-bar.clicked:nth-child(1){
+    transform: rotate(45deg) translate(0.75em, 1.25em);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2){
+    transform: scale(0.1);
+    transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3){
+    transform: rotate(135deg) translate(-0.5em, 1em);
+    transition: ease-out 0.5s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
 }
 
 @media screen and (max-width: 768px) {
@@ -118,7 +167,9 @@ nav {
     background-color: rgb(117, 167, 172);
   }
 
- 
+  .burgerX {
+    display: block;
+  }
 
   #navbar-active {
     transform: translateX(0%);

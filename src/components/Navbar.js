@@ -1,21 +1,32 @@
 import "../styles/styling.css";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useState } from "react";
 
 function Navbar() {
-  const navRef = useRef();
+  // to change burger classes
+  const [burger_class, setBurgerClass] = useState("burger-bar unclicked")
+  const [menu_class, setMenuClass] = useState("menu hidden")
+  const [isMenuClicked, setIsMenuClicked] = useState(false)
 
-  const showNavbar =() => {
-    navRef.current.classList.toggle("res")
+  // toggle burger menu change
+  const updateMenu = () => {
+      if(!isMenuClicked) {
+          setBurgerClass("burger-bar clicked")
+          setMenuClass("menu visible")
+      }
+      else {
+          setBurgerClass("burger-bar unclicked")
+          setMenuClass("menu hidden")
+      }
+      setIsMenuClicked(!isMenuClicked)
   }
 
   return (
     <BrowserRouter>
       <nav>
         <div>
-          <ul id="navbar" ref={navRef}>
+          <ul id="navbar">
             <li>
               <a className="active" href="index.html">
                 Home
@@ -26,18 +37,16 @@ function Navbar() {
             <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
             </ul>
-            <button
-					className="nav-btn nav-close-btn"
-					onClick={showNavbar}>
-					<FaTimes />
-				</button>
+            
             </div>
-
-        <button
-				className="burger"
-				onClick={showNavbar}>
-				<FaBars />
-			</button>
+            <div>
+                <div className="burger-menu" onClick={updateMenu}>
+                    <div className={burger_class} ></div>
+                    <div className={burger_class} ></div>
+                    <div className={burger_class} ></div>
+                </div>
+            <div className={menu_class}></div>
+        </div>
       </nav>
     </BrowserRouter>
   );
