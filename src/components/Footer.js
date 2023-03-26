@@ -7,12 +7,15 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const styles = {
+
+  //colors from theme set of colors 
+  
   skyblue: {
     
     color: '#6fa6fb',
     },
     purple: {
-      //purple
+      
       color: '#8d91d6',
       },
       pink: {
