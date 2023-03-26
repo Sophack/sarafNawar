@@ -30,6 +30,9 @@ button {
   border-radius: 40%;
   transition: 250ms ease-in-out; 
   transform: 150ms ease;
+  color: #0d542b;
+  font-weight: 600;
+  text-shadow: 10px 10px 4px #cbf3dc;
   }
 
 /* nav styling  */
@@ -163,13 +166,19 @@ nav {
   }
 }
 
-/* resume styling */
+/* resume & carousel styling */
 
 .card-body {
   text-decoration: none;
   font-size: 1.3rem;
-  font-weight: 600;
   transition: 0.3s ease-in-out;
-}
+  background: "transparent";
 
+  }
+
+.title {
+  color: #1b5811;
+  margin: 10px 0px 0px 10px;
+  display: flex;
+}
 

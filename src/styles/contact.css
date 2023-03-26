@@ -1,31 +1,60 @@
 /* contact form styling */
 
 li {
-    list-style-type: none;
-    font-size: 16pt;
-  }
-  .mail {
-    margin: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    width: 400px;
-    background: #d8f1f8;
-    border: 1px soild silver;
-  }
-  .mail h2 {
-    margin-left: 38px;
-  }
-  input {
-    font-size: 20pt;
-  }
-  input:focus,
-  textarea:focus {
-    background-color: lightyellow;
-  }
-  input submit {
-    font-size: 12pt;
-  }
-  .rq {
-    color: #ff0000;
-    font-size: 10pt;
-  }
+  list-style-type: none;
+  font-size: 16pt;
+}
+.mail {
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 800px;
+  background: #d8f1f8;
+  border: 1px soild silver;
+}
+.mail h2 {
+  margin-left: 38px;
+}
+input {
+  font-size: 20pt;
+}
+input:focus,
+textarea:focus {
+  background-color: lightyellow;
+}
+input submit {
+  font-size: 12pt;
+  color: #214b8f;
+}
+
+#contact {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  border-radius: 14px;
+  transition: 250ms ease-in-out;
+  transform: 150ms ease;
+  color: #1b5811;
+}
+
+.formInput {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  border-radius: 10px;
+  transition: 250ms ease-in-out;
+  transform: 150ms ease;
+  color: #1b5811;
+  width: 600px;
+  display: flex;
+}
+
+.submit{
+  display: flex;
+}
+
+.msg{
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  width: 600px;
+  height: 100px;
+  display: flex;
+}

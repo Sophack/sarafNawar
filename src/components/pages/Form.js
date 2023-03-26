@@ -57,8 +57,8 @@ function InputForm() {
   };
 
     return (
-      <div className="container mt-5" id="contact">
-        <h2 className="form">Contact me</h2>
+      <div>
+        <h2 id="contact">Contact me</h2>
         <form action="mailto:sarafnrealtor@gmail.com" method= "post"
          encType="text/plain" className="form">
         <div>
@@ -67,7 +67,8 @@ function InputForm() {
             name="email"
             onChange={handleInputChange}
             type="email"
-            placeholder="email"
+            placeholder="Email"
+            className="formInput"
             required
           />
         </div>
@@ -77,22 +78,24 @@ function InputForm() {
             name="Name"
             onChange={handleInputChange}
             type="text"
-            placeholder="name"
+            placeholder="Name"
+            className="formInput"
             required
           />
         </div>
-        <div >
+        <div>
           <input
             value={message}
             name="message"
             onChange={handleInputChange}
             type="message"
-            placeholder="message"
+            placeholder="Message"
+            className="msg"
             required
           />
         </div>
         <div>
-          <button type="button" onClick={handleFormSubmit}>
+          <button className="submit" type="button" onClick={handleFormSubmit}>
             Submit
           </button>
         </div>

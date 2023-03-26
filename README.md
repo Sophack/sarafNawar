@@ -25,25 +25,29 @@ Employers are always looking for candidates with experience in building single-p
 
 Screenshots:
 
-Homepage / About Me
-![Screenshot](assets/img/screenshot_1.png)
+This screenshot shows the Homepage / Navigation / About Me sections. The option becomes highlighted when cursor is hovering. 
+![homeNav](/src/assets/webPage1.jpg)
 
+There is an input section at the top that asks the user their name which is displayed at the top as they type. This adds to the user experience as users can see a live change and interact with the webpage. 
+![noPopUp](/src/assets/webPageNoPop.jpg)
 
-Portfolio
-![Screenshot](assets/img/screenshot_2.png)
+Once the "tell me" button is clicked, the window message reads: `"Hello -user input-, Thank you for visiting my page!"`
+![popUp](/src/assets/webPagePop.jpg)
 
+Clicking on the portfolio tab in the navigation will take the user to this section where portfolio projects are displayed in a carousel with a caption explaining the project & icons showing the different technologies used. 
+![portfolio](src/assets/webpagePort.jpg)
 
-Contact Me
-![Screenshot](assets/img/screenshot_3.png)
+This is the resume section with a preview and the skills. There is a link to the full resume, which is a deployed application.  
+![resume](src/assets/webpageResume.jpg)
 
+Below image shows the contact form. It also shows the footer which includes icons that link to the corresponding profiles of the author. 
+![footer](src/assets/webpageFooter.jpg)
 
-Resume
-![Screenshot](assets/img/screenshot_4.png)
 
 ## License:
 [![license](https://img.shields.io/badge/license-MIT-blue)](https://shields.io)
 
 
 ## Questions:
-- Github: [sarafnawar](https://github.com/sophack)
+- Github: [github.com/sophack](https://github.com/sophack)
 - Email: sarafnrealtor@gmail.com 

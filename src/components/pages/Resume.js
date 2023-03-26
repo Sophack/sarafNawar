@@ -1,5 +1,6 @@
 // We have to first import `useState` with React in order to take advantage of the hook
 import React, { useState } from 'react';
+import "../../styles/styling.css";
 
 function Resume() {
   // Declare a state variable 
@@ -13,6 +14,7 @@ function Resume() {
 
   return (
     <div className="card text-center" id="resume">
+      <h3 className='title'>Resume</h3>
       <div className="card-body">
         {/* Render the `resume` state variable */}
        
@@ -23,6 +25,7 @@ function Resume() {
           <li key={index}>{item}</li>
               )}
         </ul>
+        <a href ="https://sophack.github.io/resume/" className='title'>Link to full Resume</a>
       </div>
     </div>
   );

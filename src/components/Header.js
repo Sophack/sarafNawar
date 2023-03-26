@@ -7,7 +7,6 @@ const styles = {
       color: 'white',
       },
     heading: {
-      
       textShadow: "10px 10px 4px #ffffff",
       minHeight: 50,
       lineHeight: 1.5,
@@ -16,6 +15,7 @@ const styles = {
       padding: '20px',
       display: 'flex',
       alignSelf: 'center',
+      borderRadius: '10px',
       background: "#A3FFB9",
       background: "-moz-linear-gradient(left, #A3FFB9 0%, #D4D4D4 50%, #000000 100%)",
       background: "-webkit-linear-gradient(left, #A3FFB9 0%, #D4D4D4 50%, #000000 100%)",

@@ -26,19 +26,34 @@ const styles ={
       color:"black",
       border: "none",
       borderRadius:"15px",
-      padding: "20px",
+      padding: "2px",
+      fontSize: "12px",
     },
 
     caption: {
-      height: "400px",
+      height: "600px",
       display: "tableCaption",
-    }
+      padding: "50px",
+      display: "flex",
+
+    },
+    title:{
+      background:"transparent",
+      color:"#1b5811",
+      border: "none",
+      fontSize: "22px",
+      borderRadius: "40%",
+      paddingTop: "30px",
+    },
+
+
     
 }
 
 export default function BootstrapCarousel() {
   return (
     <div id="port">
+      <h3 style={styles.title}>Portfolio</h3>
     <Carousel fade>
       <Carousel.Item>
         <img
@@ -47,7 +62,7 @@ export default function BootstrapCarousel() {
           alt="First slide"
         />
         <Carousel.Caption style={styles.fontstyle}>
-          <h3>Recipes App
+          <h3 style={styles.fontstyle}>Recipes App
           <br></br>
           Search recipes to make at home or try a random recipe!</h3>
           <p><FaHtml5/>HTML, <FaGithub/>Git, <FaCss3Alt/>CSS, <FaJsSquare/>Javascript, 
@@ -63,7 +78,7 @@ export default function BootstrapCarousel() {
           alt="Second slide"
         />
         <Carousel.Caption style={styles.fontstyle}>
-          <h3>ShowBoat
+          <h3 style={styles.fontstyle}>ShowBoat
           <br></br>
           Search & confirm which programs are on which streaming service, find out info about the title or just plan a movie night!</h3>
           <p> <FaHtml5/>HTML, <FaGithub/>Git, <FaCss3Alt/>CSS, <FaJsSquare/>Javascript,  </p>
@@ -76,7 +91,7 @@ export default function BootstrapCarousel() {
           alt="First slide"
         />
         <Carousel.Caption style={styles.fontstyle}>
-          <h3>Family Thyme
+          <h3 style={styles.fontstyle}>Family Thyme
           <br></br>
           Save your private or precious family secrets on a an encrypted app only accessible by your family members 
             </h3>
