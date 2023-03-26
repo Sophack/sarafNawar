@@ -58,3 +58,20 @@ input submit {
   height: 100px;
   display: flex;
 }
+
+
+@media screen and (max-width: 768px) {
+  .msg{
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    width: 400px;
+    display: flex;
+  }
+
+  .formInput {
+    padding: 0.5rem 1rem;
+    color: #1b5811;
+    width: 400px;
+    display: flex;
+  }
+}

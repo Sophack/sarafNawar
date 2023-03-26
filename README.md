@@ -41,7 +41,7 @@ This is the resume section with a preview and the skills. There is a link to the
 ![resume](src/assets/webpageResume.jpg)
 
 Below image shows the contact form. It also shows the footer which includes icons that link to the corresponding profiles of the author. 
-![footer](src/assets/webpageFooter.jpg)
+![footer](src/assets/webpage2.jpg)
 
 
 ## License:
