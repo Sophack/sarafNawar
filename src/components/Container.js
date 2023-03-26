@@ -11,7 +11,6 @@ import BootstrapCarousel from './pages/Carousel';
 import Greeting from './pages/Greeting';
 
 const styles={ 
-    background: '#c9ceac',
       minHeight: 50,
       lineHeight: 1.5,
       fontSize: '1.2rem',
@@ -25,17 +24,12 @@ export default function Contain() {
       
         <div> 
     <Container style={styles}>
-      <Greeting/>
+   
       <Row>
-        <Header/>
-      <Navbar/>
         <Col>
-        <About/>
-        <BootstrapCarousel/>
-        <Resume/>
         </Col>
-        <InputForm/>
         </Row>
+        <br></br>
         <Footer/>
     </Container>
     

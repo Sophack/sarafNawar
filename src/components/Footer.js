@@ -1,52 +1,77 @@
-import React from "react";
-import { FaGithub, FaLinkedin, FaStackOverflow } from 'react-icons/fa';
-
+import * as React from 'react';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const styles = {
-
-    footer: {
-      background: '#c9ceac',
-      minHeight: 50,
-      lineHeight: 3.5,
-      fontSize: '1.2rem',
-      color: '#718232',
-      padding: '20px',
-      listStyle: "none",
-      textDecoration: "none",
-      display: "flex",
-      justifyContent: "spaceAround",
+  skyblue: {
+    
+    color: '#6fa6fb',
     },
-  };
+    purple: {
+      //purple
+      color: '#8d91d6',
+      },
+      pink: {
+        color: '#e1a5d5',
+        },
+        
+        lightblue: {
+          color: '#9fc9fc',
+          },
+};
 
 export default function Footer() {
+  const [value, setValue] = React.useState('recents');
+
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+
+  };
+
   return (
-    <div style={styles.footer} className="footer">
-      <footer style={styles.footer}>
-        <a style={styles.footer}
-          href="https://github.com/Sophack"
-          target="blank"
-          rel="noopener noreferrer"
-        >
-          <li  className="logo"><FaGithub />Github</li>
-        </a>
-        <a style={styles.footer}
-          href="https://www.linkedin.com/in/saraf-nawar-060836170/"
-          target="blank"
-          rel="noopener noreferrer"
-        >
-          <li className="logo"><FaLinkedin />LinkedIn</li>
-        </a>
-        <a style={styles.footer}
-          href="https://stackoverflow.com/users/15198797/swedishfish?tab=badges"
-          target="blank"
-          rel="noopener noreferrer"
-        >
-          <li className="logo"><FaStackOverflow />StackOverflow</li>
-        </a>
-        
-      </footer>
-    </div>
-    
+    <BottomNavigation sx={{ 
+      width: 500, 
+      background:"none",
+      height: '2rem',
+    }} 
+      value={value} onChange={handleChange}>
+      <BottomNavigationAction 
+        label="Github"
+        value="github"
+        href="https://github.com/"
+        icon={<GitHubIcon />}
+        style={styles.lightblue}
+      />
+      
+      <BottomNavigationAction
+        color="secondary"
+        label="LinkedIn"
+        value="linkedin"
+        href="https://www.linkedin.com/"
+        icon={<LinkedInIcon />}
+        style={styles.skyblue}
+      />
+      <BottomNavigationAction
+        label="Twitter"
+        value="twitter"
+        href="https://twitter.com/"
+        icon={<TwitterIcon />}
+        style={styles.purple}
+      />
+      
+      
+      <BottomNavigationAction 
+      label="Youtube" 
+      value="youtube" 
+      href="https://youtube.com/"
+      icon={<YouTubeIcon />} 
+      style={styles.pink}
+      />
+      
+    </BottomNavigation>
   );
-  
 }
